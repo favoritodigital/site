@@ -6,6 +6,7 @@ import Image from 'next/image'
 import { useRouter, usePathname } from 'next/navigation'
 
 import { Button } from './Button'
+import { ButtonDownload } from './ButtonDownload'
 
 export enum BadgePages {
   home = '/',
@@ -50,6 +51,7 @@ export const Header = React.memo(() => {
         >
           Cadastre seu Estabelecimento
         </Button>
+        <ButtonDownload />
       </div>
     </div>
   )
