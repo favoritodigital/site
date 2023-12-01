@@ -3,10 +3,10 @@
 import React from 'react'
 
 import Image from 'next/image'
-import { useRouter, usePathname } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 
-import { Button } from './Button'
-import { ButtonDownload } from './ButtonDownload'
+import { DownloadButton } from './DownloadButton'
+import { NavigationButton } from './NavigationButton'
 
 export enum BadgePages {
   home = '/',
@@ -15,15 +15,10 @@ export enum BadgePages {
 }
 
 export const Header = React.memo(() => {
-  const router = useRouter()
   const pathname = usePathname()
 
-  const onRouteChange = (route: string) => {
-    router.push(route)
-  }
-
   return (
-    <div className='flex h-20 items-center justify-between p-5 shadow-sm  backdrop-blur bg-white bg-opacity-40 fixed w-screen'>
+    <div className='flex h-20 items-center justify-between p-5 shadow-sm  backdrop-blur bg-white bg-opacity-40 fixed w-screen z-50'>
       <div>
         <Image
           src='/assets/favorito.png'
@@ -33,25 +28,22 @@ export const Header = React.memo(() => {
         />
       </div>
       <div className='flex items-center gap-2'>
-        <Button
+        <NavigationButton
           active={pathname === BadgePages.home}
-          onClick={() => onRouteChange(BadgePages.home)}
-        >
-          Home
-        </Button>
-        <Button
+          href={BadgePages.home}
+          label='Home'
+        />
+        <NavigationButton
           active={pathname === BadgePages.beFranchisee}
-          onClick={() => onRouteChange(BadgePages.beFranchisee)}
-        >
-          Seja um Franqueado
-        </Button>
-        <Button
+          href={BadgePages.beFranchisee}
+          label='Seja um Franqueado'
+        />
+        <NavigationButton
           active={pathname === BadgePages.registerEstablishment}
-          onClick={() => onRouteChange(BadgePages.registerEstablishment)}
-        >
-          Cadastre seu Estabelecimento
-        </Button>
-        <ButtonDownload />
+          href={BadgePages.registerEstablishment}
+          label='Cadastre seu Estabelecimento'
+        />
+        <DownloadButton />
       </div>
     </div>
   )
