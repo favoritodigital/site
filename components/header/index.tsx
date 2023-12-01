@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react'
+import React, { memo, useState } from 'react'
 
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
@@ -14,8 +14,9 @@ export enum BadgePages {
   registerEstablishment = '/cadastre-seu-estabelecimento',
 }
 
-export const Header = React.memo(() => {
+export const Header = memo(() => {
   const pathname = usePathname()
+  const [isMenuOpen, handleIsMenuOpen] = useState(false)
 
   return (
     <div className='flex h-20 items-center justify-between p-5 shadow-sm  backdrop-blur bg-white bg-opacity-40 fixed w-screen z-50'>
@@ -27,7 +28,7 @@ export const Header = React.memo(() => {
           height='40'
         />
       </div>
-      <div className='flex items-center gap-2'>
+      <div className='items-center gap-2 lg:flex hidden'>
         <NavigationButton
           active={pathname === BadgePages.home}
           href={BadgePages.home}
@@ -45,6 +46,27 @@ export const Header = React.memo(() => {
         />
         <DownloadButton />
       </div>
+      <button
+        onClick={() => handleIsMenuOpen(!isMenuOpen)}
+        className='flex flex-col justify-center items-center lg:hidden'
+      >
+        <span
+          className={`bg-black block transition-all duration-300 ease-out 
+                    h-0.5 w-6 rounded-sm ${
+                      isMenuOpen ? 'rotate-45 translate-y-1' : '-translate-y-0.5'
+                    }`}
+        />
+        <span
+          className={`bg-black block transition-all duration-300 ease-out 
+                    h-0.5 w-6 rounded-sm my-0.5 ${isMenuOpen ? 'opacity-0' : 'opacity-100'}`}
+        />
+        <span
+          className={`bg-black block transition-all duration-300 ease-out 
+                    h-0.5 w-6 rounded-sm ${
+                      isMenuOpen ? '-rotate-45 -translate-y-1' : 'translate-y-0.5'
+                    }`}
+        />
+      </button>
     </div>
   )
 })
