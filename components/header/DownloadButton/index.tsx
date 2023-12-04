@@ -18,7 +18,7 @@ export const DownloadButton = () => {
 
   return (
     <div
-      className={`rounded-lg text-white font-bold bg-gradient-to-r from-other-100 to-other-50 flex items-center w-40 relative h-10 cursor-pointer overflow-hidden ${
+      className={`rounded-lg text-white font-bold bg-gradient-to-r from-other-150 to-other-50 flex items-center w-40 relative h-10 cursor-pointer overflow-hidden ${
         !showMenu && 'px-4 py-2'
       }`}
       onClick={handleClick}
