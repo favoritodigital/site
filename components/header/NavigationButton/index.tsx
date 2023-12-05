@@ -1,13 +1,16 @@
 import Link from 'next/link'
 
-import { cn } from '@/lib/utils'
-import { cva, type VariantProps } from 'class-variance-authority'
+import { tv, type VariantProps } from 'tailwind-variants'
 
-const navigationButtonVariants = cva('', {
+const navigationButtonVariants = tv({
+  base: 'px-4 py-2',
   variants: {
     variant: {
-      desktop: 'bg-white rounded-lg px-4 py-2',
-      mobile: 'px-4 py-2 text-white',
+      desktop: 'rounded-lg bg-white',
+      mobile: 'text-white',
+    },
+    active: {
+      true: 'font-bold',
     },
   },
   defaultVariants: {
@@ -15,12 +18,17 @@ const navigationButtonVariants = cva('', {
   },
 })
 
-const activeMarkerVariants = cva('', {
+const activeMarkerVariants = tv({
+  base: '',
   variants: {
     variant: {
       desktop:
-        'absolute bottom-[-0.25rem] h-2 w-2 bg-primary-400 rounded-full left-1/2 transform -translate-x-1/2',
-      mobile: 'border-b-4 border-white',
+        'absolute bottom-[-0.25rem] left-1/2 h-2 w-2 -translate-x-1/2 transform rounded-full bg-primaryLight-400',
+      mobile: 'border-b-4',
+    },
+    active: {
+      true: 'border-white',
+      false: 'border-transparent bg-transparent',
     },
   },
   defaultVariants: {
@@ -42,15 +50,12 @@ export const NavigationButton = ({
   onClick,
   variant,
 }: NavigationButtonProps) => {
-  const variantStyles = cn(navigationButtonVariants({ variant }), active && 'font-bold')
+  const variantStyles = navigationButtonVariants({ variant, active })
 
-  const activeMarkerStyles = cn(
-    activeMarkerVariants({ variant }),
-    !active && 'border-transparent bg-transparent',
-  )
+  const activeMarkerStyles = activeMarkerVariants({ variant, active })
 
   return (
-    <div className='relative flex flex-col justify-center items-center'>
+    <div className='relative flex flex-col items-center justify-center'>
       <Link href={href} className={variantStyles} onClick={onClick}>
         {label}
         <div className={activeMarkerStyles} />

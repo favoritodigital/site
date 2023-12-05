@@ -1,101 +1,109 @@
 'use client'
 
-import React, { memo, useState } from 'react'
+import React, { useState } from 'react'
 
-import Image from 'next/image'
+import Image from 'next/legacy/image'
+import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
 import { DownloadButton } from './DownloadButton'
-import { MobileMenuButton } from './MobileMenuButton'
+import { MenuButton } from './MenuButton'
 import { NavigationButton } from './NavigationButton'
 
-export enum BadgePages {
+enum PagesBadge {
   home = '/',
-  beFranchisee = '/seja-franqueado',
-  registerEstablishment = '/cadastre-seu-estabelecimento',
+  franchiseeLandingPage = '/seja-franqueado',
+  establishmentLandingPage = '/cadastre-seu-estabelecimento',
 }
 
-export const Header = memo(() => {
+export const Header = () => {
   const pathname = usePathname()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
-  const handleMobileMenuClick = () => {
+  const handleMenuClick = () => {
     setIsMenuOpen(!isMenuOpen)
   }
 
   return (
     <div
-      className={`flex h-20 items-center justify-between p-5 backdrop-blur bg-white bg-opacity-40 fixed w-screen z-20 ${
-        !isMenuOpen && 'shadow-sm'
-      }`}
+      data-menuopen={isMenuOpen}
+      className='fixed z-20 flex h-20 w-screen items-center justify-between bg-white bg-opacity-40 p-5 backdrop-blur
+        data-[menuopen=false]:shadow-sm
+      '
     >
-      <Image
-        src='/assets/favorito.png'
-        alt='favorito - a sua melhor experiência'
-        width='165'
-        height='40'
-      />
-      <div className='items-center gap-2 lg:flex hidden'>
+      <Link className='relative flex h-full w-40' href='/'>
+        <Image
+          src='/assets/favorito.svg'
+          alt='Favorito - a sua melhor experiência'
+          objectFit='contain'
+          layout='fill'
+        />
+      </Link>
+      <div className='hidden items-center gap-2 lg:flex'>
         <NavigationButton
-          active={pathname === BadgePages.home}
-          href={BadgePages.home}
+          active={pathname === PagesBadge.home}
+          href={PagesBadge.home}
           label='Início'
         />
         <NavigationButton
-          active={pathname === BadgePages.beFranchisee}
-          href={BadgePages.beFranchisee}
+          active={pathname === PagesBadge.franchiseeLandingPage}
+          href={PagesBadge.franchiseeLandingPage}
           label='Seja um Franqueado'
         />
         <NavigationButton
-          active={pathname === BadgePages.registerEstablishment}
-          href={BadgePages.registerEstablishment}
+          active={pathname === PagesBadge.establishmentLandingPage}
+          href={PagesBadge.establishmentLandingPage}
           label='Cadastre seu Estabelecimento'
         />
         <DownloadButton />
       </div>
-      <MobileMenuButton active={isMenuOpen} onClick={handleMobileMenuClick} />
+      <MenuButton active={isMenuOpen} onClick={handleMenuClick} />
       <div
-        className={`absolute top-0 right-0 w-screen bg-gradient-to-r from-other-200 to-other-100 z-30 lg:hidden transition-height duration-300 ease-in-out ${
-          isMenuOpen ? 'h-screen opacity-100' : 'h-0 opacity-0'
-        }`}
+        data-menuopen={isMenuOpen}
+        className='transition-height absolute right-0 top-0 z-30 h-0 w-screen bg-gradient-to-br from-primaryDark-85 to-primaryLight-85 duration-300 ease-in-out 
+        data-[menuopen=true]:h-screen data-[menuopen=false]:opacity-0 lg:hidden'
       >
         <div className='p-5'>
-          <Image
-            src='/assets/favorito-white.png'
-            alt='favorito - a sua melhor experiência'
-            width='165'
-            height='40'
-            className={`transition-opacity duration-300 ${
-              isMenuOpen ? 'opacity-100' : 'opacity-0'
-            }`}
-          />
+          <Link
+            data-menuopen={isMenuOpen}
+            className='relative flex h-10 w-40 transition-opacity duration-300 data-[menuopen=false]:opacity-0'
+            href='/'
+            onClick={handleMenuClick}
+          >
+            <Image
+              src='/assets/favorito-white.svg'
+              alt='Favorito - a sua melhor experiência'
+              objectFit='contain'
+              layout='fill'
+            />
+          </Link>
         </div>
         {isMenuOpen && (
-          <div className='flex flex-col justify-center items-start w-full h-full pb-40 px-5 gap-5'>
+          <div className='flex h-full w-full flex-col items-start justify-center gap-5 px-5 pb-40'>
             <NavigationButton
-              active={pathname === BadgePages.home}
-              href={BadgePages.home}
+              active={pathname === PagesBadge.home}
+              href={PagesBadge.home}
               label='Início'
               variant='mobile'
-              onClick={handleMobileMenuClick}
+              onClick={handleMenuClick}
             />
             <NavigationButton
-              active={pathname === BadgePages.beFranchisee}
-              href={BadgePages.beFranchisee}
+              active={pathname === PagesBadge.franchiseeLandingPage}
+              href={PagesBadge.franchiseeLandingPage}
               label='Seja um Franqueado'
               variant='mobile'
-              onClick={handleMobileMenuClick}
+              onClick={handleMenuClick}
             />
             <NavigationButton
-              active={pathname === BadgePages.registerEstablishment}
-              href={BadgePages.registerEstablishment}
+              active={pathname === PagesBadge.establishmentLandingPage}
+              href={PagesBadge.establishmentLandingPage}
               label='Cadastre seu Estabelecimento'
               variant='mobile'
-              onClick={handleMobileMenuClick}
+              onClick={handleMenuClick}
             />
           </div>
         )}
       </div>
     </div>
   )
-})
+}
