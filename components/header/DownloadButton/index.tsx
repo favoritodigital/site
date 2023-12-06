@@ -18,7 +18,7 @@ export const DownloadButton = () => {
 
   return (
     <div
-      className='relative flex h-10 w-40 cursor-pointer items-center overflow-hidden rounded-lg bg-gradient-to-br from-primaryDark-85 to-primaryLight-85 font-bold text-white'
+      className='relative flex h-10 w-40 cursor-pointer items-center overflow-hidden rounded-lg bg-gradient-to-tr from-primaryDark-85 to-primaryLight-400 font-bold text-white'
       onClick={handleClick}
       onMouseLeave={() => setShowMenu(false)}
     >
