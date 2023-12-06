@@ -10,7 +10,6 @@
     "next.config.js": true,
     "tsconfig.json": true,
     "yarn.lock": true,
-    "postcss.config.js": true,
-    "tailwind.config.ts": true
+    "postcss.config.js": true
   }
 }

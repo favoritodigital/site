@@ -1,7 +1,8 @@
 import type { Metadata } from 'next'
 import { Lato } from 'next/font/google'
 
-import './globals.css'
+import '../globals.css'
+import { Header } from '@/components/header'
 
 const lato = Lato({
   weight: '400',
@@ -17,7 +18,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang='en'>
-      <body className={lato.className}>{children}</body>
+      <body className={lato.className}>
+        <Header />
+        <div className='pt-20'>{children}</div>
+      </body>
     </html>
   )
 }
