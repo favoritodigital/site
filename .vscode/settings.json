@@ -10,6 +10,8 @@
     "next.config.js": true,
     "tsconfig.json": true,
     "yarn.lock": true,
-    "postcss.config.js": true
+    "postcss.config.js": true,
+    "LICENSE.md": true,
+    "preview.png": true
   }
 }
