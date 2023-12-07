@@ -10,11 +10,7 @@ import { DownloadButton } from './DownloadButton'
 import { MenuButton } from './MenuButton'
 import { NavigationButton } from './NavigationButton'
 
-enum PagesBadge {
-  home = '/',
-  franchiseeLandingPage = '/seja-franqueado',
-  establishmentLandingPage = '/cadastre-seu-estabelecimento',
-}
+import { PagesBadge } from '@/src/utils/pagesBadge'
 
 export const Header = () => {
   const pathname = usePathname()
@@ -31,9 +27,9 @@ export const Header = () => {
         data-[menuopen=false]:shadow-sm
       '
     >
-      <Link className='relative flex h-full w-40' href='/'>
+      <Link className='relative flex h-full w-40' href={PagesBadge.home}>
         <Image
-          src='/assets/favorito.svg'
+          src='/assets/favorito-black.svg'
           alt='Favorito - sua melhor experiência'
           objectFit='contain'
           layout='fill'
@@ -60,7 +56,7 @@ export const Header = () => {
       <MenuButton active={isMenuOpen} onClick={handleMenuClick} />
       <div
         data-menuopen={isMenuOpen}
-        className='transition-height absolute right-0 top-0 z-30 h-0 w-screen bg-gradient-to-tr from-primaryDark-85 to-primaryLight-85 duration-300 ease-in-out 
+        className='transition-height from-primaryDark-85 to-primaryLight-85 absolute right-0 top-0 z-30 h-0 w-screen bg-gradient-to-tr duration-300 ease-in-out 
         data-[menuopen=true]:h-screen data-[menuopen=false]:opacity-0 lg:hidden'
       >
         {isMenuOpen && (
@@ -69,7 +65,7 @@ export const Header = () => {
               <Link
                 data-menuopen={isMenuOpen}
                 className='relative flex h-10 w-40 transition-opacity duration-300 data-[menuopen=false]:opacity-0'
-                href='/'
+                href={PagesBadge.home}
                 onClick={handleMenuClick}
               >
                 <Image
