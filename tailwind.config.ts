@@ -44,6 +44,9 @@ module.exports = {
         tertiary: {
           400: '#191a38',
         },
+        background: {
+          400: '#EDEDED',
+        },
       },
     },
   },

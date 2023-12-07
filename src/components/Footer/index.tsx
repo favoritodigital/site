@@ -84,10 +84,18 @@ export const Footer = () => {
           />
         </div>
         <div className='flex flex-col gap-2 text-lg '>
-          <Link className='w-fit hover:text-primaryLight-400' href={PagesBadge.termsOfUse}>
+          <Link
+            className='w-fit hover:text-primaryLight-400'
+            href={PagesBadge.termsOfUse}
+            target='_blank'
+          >
             Termos de Uso
           </Link>
-          <Link className='w-fit hover:text-primaryLight-400' href={PagesBadge.privacyPolicy}>
+          <Link
+            className='w-fit hover:text-primaryLight-400'
+            href={PagesBadge.privacyPolicy}
+            target='_blank'
+          >
             Política de Privacidade
           </Link>
         </div>

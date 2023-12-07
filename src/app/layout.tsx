@@ -27,7 +27,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang='en'>
       <body className={lato.className}>
         <Header />
-        <div className='pb-10 pt-20'>{children}</div>
+        <div>{children}</div>
         <Footer />
         <GoogleAnalyticsScript />
         <FacebookPixelScript />
