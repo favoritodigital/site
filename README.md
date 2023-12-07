@@ -17,7 +17,7 @@ The layout and UI was made by [Gondin](https://gondin.cc/).
 
 ### Code
 
-The code was made by [@dalcastagned] (https://www.github.com/dalcastagned)
+The code was made by [@dalcastagned](https://www.github.com/dalcastagned/)
 
 ### License
 
