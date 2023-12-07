@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Lato } from 'next/font/google'
 
 import './globals.css'
+import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 
 import { Footer } from '@components/Footer'
@@ -25,6 +26,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Header />
         <div className='pb-10 pt-20'>{children}</div>
         <Footer />
+        <Analytics />
         <SpeedInsights />
       </body>
     </html>
