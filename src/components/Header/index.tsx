@@ -10,7 +10,7 @@ import { DownloadButton } from './DownloadButton'
 import { MenuButton } from './MenuButton'
 import { NavigationButton } from './NavigationButton'
 
-import { PagesBadge } from '@/src/utils/pagesBadge'
+import { PagesBadge } from '@utils/pagesBadge'
 
 export const Header = () => {
   const pathname = usePathname()
@@ -56,7 +56,7 @@ export const Header = () => {
       <MenuButton active={isMenuOpen} onClick={handleMenuClick} />
       <div
         data-menuopen={isMenuOpen}
-        className='transition-height from-primaryDark-85 to-primaryLight-85 absolute right-0 top-0 z-30 h-0 w-screen bg-gradient-to-tr duration-300 ease-in-out 
+        className='transition-height absolute right-0 top-0 z-30 h-0 w-screen bg-gradient-to-tr from-primaryDark-85 to-primaryLight-85 duration-300 ease-in-out 
         data-[menuopen=true]:h-screen data-[menuopen=false]:opacity-0 lg:hidden'
       >
         {isMenuOpen && (

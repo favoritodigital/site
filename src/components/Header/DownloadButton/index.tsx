@@ -3,7 +3,7 @@ import { isMobile } from 'react-device-detect'
 
 import Image from 'next/image'
 
-import { APP_STORE_URL, GOOGLE_PLAY_URL, ONE_LINK_URL } from '@/src/repositories/constants'
+import { APP_STORE_URL, GOOGLE_PLAY_URL, ONE_LINK_URL } from '@/repositories/constants'
 
 export const DownloadButton = () => {
   const [showMenu, setShowMenu] = useState(false)
@@ -18,7 +18,7 @@ export const DownloadButton = () => {
 
   return (
     <div
-      className='from-primaryDark-400 to-primaryLight-400 relative flex h-10 w-40 cursor-pointer items-center overflow-hidden rounded-lg bg-gradient-to-tr font-bold text-white'
+      className='relative flex h-10 w-40 cursor-pointer items-center overflow-hidden rounded-lg bg-gradient-to-tr from-primaryDark-400 to-primaryLight-400 font-bold text-white'
       onClick={handleClick}
       onMouseLeave={() => setShowMenu(false)}
     >

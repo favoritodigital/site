@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import { Lato } from 'next/font/google'
 
 import './globals.css'
-import { Footer } from '@/src/components/footer'
-import { Header } from '@/src/components/header'
+import { Footer } from '@components/Footer'
+import { Header } from '@components/Header'
 
 const lato = Lato({
   weight: '400',

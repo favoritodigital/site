@@ -3,11 +3,11 @@ import Link from 'next/link'
 
 import { IconLink } from './IconLink'
 
-import { PagesBadge } from '@/src/utils/pagesBadge'
+import { PagesBadge } from '@utils/pagesBadge'
 
 export const Footer = () => {
   return (
-    <div className='bg-tertiary-400 flex grid-cols-3 flex-col place-items-center gap-10 py-6 text-white lg:grid lg:h-80 lg:p-0'>
+    <div className='flex grid-cols-3 flex-col place-items-center gap-10 bg-tertiary-400 py-6 text-white lg:grid lg:h-80 lg:p-0'>
       <div className='flex w-72 flex-col gap-2'>
         <Link className='relative h-12 w-52' href={PagesBadge.home}>
           <Image
@@ -34,20 +34,20 @@ export const Footer = () => {
         </div>
       </div>
       <div className='flex w-72 flex-col gap-2 text-lg'>
-        <Link className='hover:text-primaryLight-400 w-fit' href={PagesBadge.home}>
+        <Link className='w-fit hover:text-primaryLight-400' href={PagesBadge.home}>
           Início
         </Link>
-        <Link className='hover:text-primaryLight-400 w-fit' href={PagesBadge.franchiseeLandingPage}>
+        <Link className='w-fit hover:text-primaryLight-400' href={PagesBadge.franchiseeLandingPage}>
           Seja um Franqueado
         </Link>
         <Link
-          className='hover:text-primaryLight-400 w-fit'
+          className='w-fit hover:text-primaryLight-400'
           href={PagesBadge.establishmentLandingPage}
         >
           Cadastre seu Estabelecimento
         </Link>
-        <Link className='hover:text-primaryLight-400 w-fit' href={PagesBadge.whoWeAre}>
-          Quem Somos?
+        <Link className='w-fit hover:text-primaryLight-400' href={PagesBadge.whoWeAre}>
+          Quem Somos
         </Link>
       </div>
       <div className='flex w-72 flex-col gap-8'>
@@ -72,7 +72,7 @@ export const Footer = () => {
           />
           <IconLink
             icon='/assets/icons/github.svg'
-            href='https://github.com/favoritodigital/site-old'
+            href='https://github.com/favoritodigital/site'
             title='GitHub'
             target='_blank'
           />
@@ -84,10 +84,10 @@ export const Footer = () => {
           />
         </div>
         <div className='flex flex-col gap-2 text-lg '>
-          <Link className='hover:text-primaryLight-400 w-fit' href={PagesBadge.termsOfUse}>
+          <Link className='w-fit hover:text-primaryLight-400' href={PagesBadge.termsOfUse}>
             Termos de Uso
           </Link>
-          <Link className='hover:text-primaryLight-400 w-fit' href={PagesBadge.privacyPolicy}>
+          <Link className='w-fit hover:text-primaryLight-400' href={PagesBadge.privacyPolicy}>
             Política de Privacidade
           </Link>
         </div>
