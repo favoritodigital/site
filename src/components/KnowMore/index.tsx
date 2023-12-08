@@ -1,12 +1,14 @@
 import Image from 'next/image'
 
+import { Balloon } from '../Balloon'
+
 export const KnowMore = () => {
   return (
-    <div className='h-32 w-32 rounded-b-full rounded-tr-full bg-gradient-to-tr from-primaryDark-400 to-primaryLight-400 text-white'>
-      <div className='flex h-full w-full flex-col items-center justify-center'>
+    <Balloon variant='tl' size={32} color='gradient'>
+      <div className='flex h-full w-full flex-col items-center justify-center text-white'>
         <Image src='/assets/icons/scroll-down.svg' alt='scroll down icon' height={36} width={36} />
         <span>Saiba mais</span>
       </div>
-    </div>
+    </Balloon>
   )
 }

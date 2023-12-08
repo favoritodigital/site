@@ -1,0 +1,47 @@
+import { ComponentProps, ReactNode } from 'react'
+
+import { twMerge } from 'tailwind-merge'
+import { VariantProps, tv } from 'tailwind-variants'
+
+const ballonVariants = tv({
+  base: '',
+  variants: {
+    variant: {
+      tl: 'rounded-b-full rounded-tr-full',
+      tr: 'rounded-b-full rounded-tl-full',
+      bl: 'rounded-t-full rounded-br-full',
+      br: 'rounded-t-full rounded-bl-full',
+      full: 'rounded-full',
+    },
+    color: {
+      gradient: 'bg-gradient-to-tr from-primaryDark-400 to-primaryLight-400',
+      primaryLight: 'bg-primaryLight-400',
+      primaryDark: 'bg-primaryDark-400',
+      secondary: 'bg-secondary-400',
+      tertiary: 'bg-tertiary-400',
+      outlinePrimaryLight: 'border border-primaryLight-400',
+      outlinePrimaryDark: 'border border-primaryDark-400',
+      outlineSecondary: 'border border-secondary-400',
+      outlineTertiary: 'border border-tertiary-400',
+      background: 'bg-background-400',
+    },
+    size: {
+      32: 'h-32 w-32',
+      28: 'h-28 w-28',
+      16: 'h-16 w-16',
+      14: 'h-14 w-14',
+    },
+  },
+})
+
+interface BallonProps
+  extends Pick<ComponentProps<'div'>, 'className'>,
+    VariantProps<typeof ballonVariants> {
+  children?: ReactNode
+}
+
+export const Balloon = ({ children, variant, color, size, className }: BallonProps) => {
+  return (
+    <div className={twMerge(ballonVariants({ variant, color, size }), className)}>{children}</div>
+  )
+}
