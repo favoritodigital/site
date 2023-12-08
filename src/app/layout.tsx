@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import { Lato } from 'next/font/google'
 
 import './globals.css'
+
+import { GoogleAnalyticsScript } from '@utils/GoogleAnalyticsScript'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 
@@ -23,6 +25,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang='en'>
       <body className={lato.className}>
+        <GoogleAnalyticsScript />
         <Header />
         <div className='pb-10 pt-20'>{children}</div>
         <Footer />
