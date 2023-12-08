@@ -1,6 +1,8 @@
 import { Metadata } from 'next'
 import Image from 'next/legacy/image'
 
+import { KnowMore } from '@/components/KnowMore'
+
 export const metadata: Metadata = {
   title: 'Seja Franqueado | Favorito',
 }
@@ -8,7 +10,7 @@ export const metadata: Metadata = {
 export default function FranchiseeLandingPage() {
   return (
     <div>
-      <section className='relative h-screen max-h-[51rem] bg-background-400'>
+      <section className='relative h-screen max-h-[51rem] overflow-x-hidden bg-background-400'>
         <div className='absolute left-[-8.3rem] top-[-5.3rem] z-10 h-screen max-h-[56.3rem] w-screen max-w-[56.3rem] rounded-b-full rounded-tl-full bg-white'>
           <div className='absolute bottom-60 right-40 flex flex-col gap-6'>
             <h1 className='max-w-md text-3xl'>
@@ -28,15 +30,18 @@ export default function FranchiseeLandingPage() {
               Quero saber mais!
             </button>
           </div>
+          <div className='absolute bottom-40 right-[-3rem] z-20 h-32 w-32'>
+            <KnowMore />
+          </div>
         </div>
-        <div className='absolute right-[-8.3rem] top-[-5.3rem] h-screen max-h-[56.3rem] w-screen max-w-[56.3rem]'>
+        <div className='absolute right-[-2rem] top-0 h-screen max-h-[48rem] w-screen max-w-[48rem]'>
           <div className='flex h-full w-full flex-col gap-6'>
             <Image
               src='/assets/images/franchisee.png'
               alt='Homem vestido com traje social segurando um iPad em mãos'
               objectFit='cover'
               layout='fill'
-              className='rounded-b-full rounded-tr-full'
+              className='rounded-b-full'
             />
           </div>
         </div>
