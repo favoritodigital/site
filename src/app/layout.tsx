@@ -3,6 +3,7 @@ import { Lato } from 'next/font/google'
 
 import './globals.css'
 
+import { FacebookPixelScript } from '@/utils/FacebookPixelScript'
 import { GoogleAnalyticsScript } from '@utils/GoogleAnalyticsScript'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
@@ -25,10 +26,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang='en'>
       <body className={lato.className}>
-        <GoogleAnalyticsScript />
         <Header />
         <div className='pb-10 pt-20'>{children}</div>
         <Footer />
+        <GoogleAnalyticsScript />
+        <FacebookPixelScript />
         <Analytics />
         <SpeedInsights />
       </body>
