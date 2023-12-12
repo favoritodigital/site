@@ -1,4 +1,6 @@
-import { ComponentProps, ReactNode } from 'react'
+import { Children, ComponentProps, ReactNode, cloneElement, isValidElement } from 'react'
+
+import Image from 'next/legacy/image'
 
 import { twMerge } from 'tailwind-merge'
 import { VariantProps, tv } from 'tailwind-variants'
@@ -26,10 +28,11 @@ const ballonVariants = tv({
       background: 'bg-background-400',
     },
     size: {
-      32: 'h-32 w-32',
-      28: 'h-28 w-28',
-      16: 'h-16 w-16',
-      14: 'h-14 w-14',
+      '32': 'h-32 w-32',
+      '28': 'h-28 w-28',
+      '16': 'h-16 w-16',
+      '14': 'h-14 w-14',
+      image: 'h-[17rem] w-[17rem] sm:h-[20rem] sm:w-[20rem] md:h-[27rem] md:w-[27rem]',
     },
   },
 })
@@ -42,6 +45,16 @@ interface BallonProps
 
 export const Balloon = ({ children, variant, color, size, className }: BallonProps) => {
   return (
-    <div className={twMerge(ballonVariants({ variant, color, size }), className)}>{children}</div>
+    <div className={twMerge(ballonVariants({ variant, color, size }), className)}>
+      {Children.map(children, child => {
+        if (isValidElement(child) && child.type === Image) {
+          return cloneElement(child, {
+            ...child.props,
+            className: ballonVariants({ variant, color, size }),
+          })
+        }
+        return child
+      })}
+    </div>
   )
 }

@@ -10,7 +10,7 @@ export const StoreButton = ({ store = 'android' }: StoreButtonProps) => {
   const icon = store === 'android' ? 'google-play' : 'app-store'
   return (
     <a
-      className='flex w-fit gap-2 rounded-lg bg-tertiary-400 p-2 text-white hover:opacity-95'
+      className='flex w-fit gap-2 rounded-lg bg-tertiary-400 p-2 text-white hover:bg-gradient-to-tr hover:from-primaryDark-400 hover:to-primaryLight-400'
       href={store === 'android' ? GOOGLE_PLAY_URL : APP_STORE_URL}
       target='_blank'
     >
