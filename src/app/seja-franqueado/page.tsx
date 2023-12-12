@@ -63,12 +63,14 @@ export default function FranchiseeLandingPage() {
         <iframe
           className='mx-auto h-[26rem] w-full max-w-[48rem] rounded-md'
           src='https://www.youtube.com/embed/6E2NXaYui_s'
+          allowFullScreen
+          title='Video de apresentação da Favorito'
         />
         <button className='mx-auto w-fit rounded-lg bg-tertiary-400 p-2 text-white hover:bg-gradient-to-tr hover:from-primaryDark-400 hover:to-primaryLight-400'>
           Quero conhecer melhor agora
         </button>
       </section>
-      <section className='flex flex-col items-center'>
+      <section className='mb-6 flex flex-col items-center'>
         <div className='mx-10 mt-10 flex max-w-6xl grid-cols-2 flex-col gap-10 md:mx-20 md:mt-20 lg:grid'>
           <div className='flex h-full items-center'>
             <div className='flex w-full grid-cols-[3.5rem_1fr] flex-col items-center gap-10 md:grid md:items-start'>
@@ -179,7 +181,7 @@ export default function FranchiseeLandingPage() {
             </div>
           </div>
           <div className='mt-10 flex w-full justify-center'>
-            <div className='relative w-fit lg:mt-0'>
+            <div className='relative h-fit w-fit lg:mt-0'>
               <Balloon variant='br' size='image' className='relative'>
                 <Image
                   src='/assets/images/yourEarnings.png'
@@ -212,6 +214,12 @@ export default function FranchiseeLandingPage() {
                   </div>
                 </div>
               </Balloon>
+              <div className='absolute bottom-0 left-[-1.5rem] h-24 w-16 rounded-tl-[3rem] border border-tertiary-400 sm:left-[-2.5rem] sm:h-28 sm:w-20 md:h-36 md:w-24 md:rounded-tl-[4rem]' />
+              <Balloon
+                variant='tl'
+                color='gradient'
+                className='absolute bottom-[-2rem] left-6 h-16 w-16 sm:h-20 sm:w-20 md:left-10 md:h-24 md:w-24'
+              />
             </div>
           </div>
         </div>

@@ -30,6 +30,7 @@ const ballonVariants = tv({
     size: {
       '32': 'h-32 w-32',
       '28': 'h-28 w-28',
+      '24': 'h-24 w-24',
       '16': 'h-16 w-16',
       '14': 'h-14 w-14',
       image: 'h-[17rem] w-[17rem] sm:h-[20rem] sm:w-[20rem] md:h-[27rem] md:w-[27rem]',
