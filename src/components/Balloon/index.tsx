@@ -31,6 +31,7 @@ const ballonVariants = tv({
       '32': 'h-32 w-32',
       '28': 'h-28 w-28',
       '24': 'h-24 w-24',
+      '20': 'h-20 w-20',
       '16': 'h-16 w-16',
       '14': 'h-14 w-14',
       image: 'h-[17rem] w-[17rem] sm:h-[20rem] sm:w-[20rem] md:h-[27rem] md:w-[27rem]',
@@ -42,13 +43,21 @@ interface BallonProps
   extends Pick<ComponentProps<'div'>, 'className'>,
     VariantProps<typeof ballonVariants> {
   children?: ReactNode
+  icon?: boolean
 }
 
-export const Balloon = ({ children, variant, color, size, className }: BallonProps) => {
+export const Balloon = ({
+  children,
+  variant,
+  color,
+  size,
+  className,
+  icon = false,
+}: BallonProps) => {
   return (
     <div className={twMerge(ballonVariants({ variant, color, size }), className)}>
       {Children.map(children, child => {
-        if (isValidElement(child) && child.type === Image) {
+        if (isValidElement(child) && child.type === Image && !icon) {
           return cloneElement(child, {
             ...child.props,
             className: ballonVariants({ variant, color, size }),

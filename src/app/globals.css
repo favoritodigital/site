@@ -2,6 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.custom-align-top {
-  align-self: flex-start; /* Isso alinha o item no início do contêiner flexível (no topo) */
+html {
+  scroll-behavior: smooth;
 }
