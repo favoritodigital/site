@@ -99,16 +99,28 @@ export const Footer = () => {
             Política de Privacidade
           </Link>
         </div>
-        <Link href='https://softville.org.br/' target='_blank'>
-          <div className='relative h-20 w-52'>
-            <Image
-              src='/assets/softville.svg'
-              alt='Softville - escola de negócios'
-              objectFit='contain'
-              layout='fill'
-            />
-          </div>
-        </Link>
+        <div className='flex gap-6'>
+          <Link href='https://softville.org.br/' target='_blank'>
+            <div className='relative h-20 w-32'>
+              <Image
+                src='/assets/softville.svg'
+                alt='Softville - escola de negócios'
+                objectFit='contain'
+                layout='fill'
+              />
+            </div>
+          </Link>
+          <Link href='https://www.wow.ac/' target='_blank'>
+            <div className='relative h-20 w-32'>
+              <Image
+                src='/assets/wow.svg'
+                alt='WOW - aceleração de Startup e Investidores'
+                objectFit='contain'
+                layout='fill'
+              />
+            </div>
+          </Link>
+        </div>
       </div>
     </div>
   )
