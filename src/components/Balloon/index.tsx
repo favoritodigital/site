@@ -26,6 +26,7 @@ const ballonVariants = tv({
       outlineSecondary: 'border border-secondary-400',
       outlineTertiary: 'border border-tertiary-400',
       background: 'bg-background-400',
+      green: 'bg-green-500',
     },
     size: {
       '32': 'h-32 w-32',
