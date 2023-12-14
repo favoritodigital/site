@@ -7,13 +7,13 @@ import { KnowMore } from '@/components/KnowMore'
 export const Section01 = () => {
   return (
     <section className='flex items-center justify-center bg-background-400 pb-16 pt-32 sm:pt-36'>
-      <div className='lggrid flex w-full max-w-7xl grid-cols-2 px-10 sm:px-20 lg:h-[40rem]'>
+      <div className='flex w-full max-w-7xl grid-cols-2 px-10 sm:px-20 lg:grid lg:h-[40rem]'>
         <div className='relative flex h-full w-full flex-col items-center justify-center rounded-3xl bg-white p-10 lg:rounded-e-none'>
           <div className='flex flex-col gap-6'>
             <h1 className='max-w-md text-2xl md:text-3xl'>
               Você tem a oportunidade de{' '}
               <span className='bg-gradient-to-tr from-primaryDark-400 to-primaryLight-400 bg-clip-text font-semibold text-transparent'>
-                conectar pessoas aos seus novos lugares favoritos
+                conectar pessoas aos seus novos locais favoritos
               </span>{' '}
               e faturar alto por isso.
             </h1>
@@ -30,8 +30,8 @@ export const Section01 = () => {
               Quero saber mais!
             </Link>
           </div>
-          <div className='absolute bottom-[-4rem] right-[-1.5rem] z-20 h-24 w-24 sm:right-[-4rem] sm:h-32 sm:w-32'>
-            <KnowMore className='h-24 w-24 md:h-32 md:w-32' />
+          <div className='absolute bottom-[-5rem] right-[50%] z-20 h-24 w-24 translate-x-[50%] sm:bottom-[-7rem] sm:h-32 sm:w-32 lg:bottom-[-4rem] lg:right-[-4rem] lg:translate-x-0'>
+            <KnowMore className='h-24 w-24 lg:h-32 lg:w-32' />
           </div>
           <div className='absolute left-[-3rem] top-[-3rem] hidden flex-col gap-2 sm:flex'>
             <div className='flex gap-2'>
@@ -54,8 +54,8 @@ export const Section01 = () => {
         </div>
         <div className='relative hidden h-full w-full flex-col gap-6 lg:flex'>
           <Image
-            src='/assets/images/franchisee.png'
-            alt='Homem vestido com traje social segurando um iPad em mãos'
+            src='/assets/images/franchisee.jpg'
+            alt='Freelancer feliz com tablet e laptop em uma cafeteria'
             objectFit='cover'
             layout='fill'
             className='rounded-e-3xl'

@@ -11,7 +11,7 @@ export const Section02 = () => {
       </h2>
       <p className='mx-auto max-w-3xl text-center text-lg'>
         Seja dono do aplicativo Favorito e tenha a chance de faturar mais de{' '}
-        <strong>R$ 20 mil reais por mês</strong> vendendo a nossa solução! Assista o vídeo abaixo
+        <strong>R$ 15 mil reais por mês</strong> vendendo a nossa solução! Assista o vídeo abaixo
         para entender:
       </p>
       <iframe

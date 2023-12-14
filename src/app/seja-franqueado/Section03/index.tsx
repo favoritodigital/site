@@ -15,7 +15,7 @@ export const Section03 = () => {
               </span>
             </Balloon>
             <div className='flex h-full max-w-md flex-col gap-8'>
-              <h3 className='text-3xl'>Como funciona?</h3>
+              <h3 className='pt-[0.6rem] text-3xl'>Como funciona?</h3>
               <div className='flex flex-col gap-4'>
                 <p>
                   Nossos licenciados cadastram e atualizam as informações dos estabelecimentos de
@@ -27,7 +27,7 @@ export const Section03 = () => {
                 </p>
               </div>
               <strong className='text-lg'>Baixe o app e conheça!</strong>
-              <div className='flex gap-4'>
+              <div className='flex w-full justify-center gap-4 lg:justify-start'>
                 <StoreButton store='ios' />
                 <StoreButton store='android' />
               </div>
@@ -38,9 +38,9 @@ export const Section03 = () => {
           <div className='relative w-fit lg:mt-0'>
             <Balloon variant='bl' size='image' className='relative'>
               <Image
-                src='/assets/images/howWorks.png'
-                alt='Homem mostrando o aplicativo Favorito em um iPad'
-                objectFit='contain'
+                src='/assets/images/howWorks.jpg'
+                alt='Barista adulto medio e seu jovem colega de trabalho usando o touchpad enquanto trabalhava em um pub'
+                objectFit='cover'
                 layout='fill'
               />
             </Balloon>
@@ -119,9 +119,9 @@ export const Section03 = () => {
           <div className='relative h-fit w-fit lg:mt-0'>
             <Balloon variant='br' size='image' className='relative'>
               <Image
-                src='/assets/images/yourEarnings.png'
-                alt='Homem vendos os seus ganhos na tela do celular'
-                objectFit='contain'
+                src='/assets/images/yourEarnings.jpg'
+                alt='Feliz empresario parado na janela do escritorio e lendo mensagem de texto no celular enquanto segura o laptop'
+                objectFit='cover'
                 layout='fill'
               />
             </Balloon>

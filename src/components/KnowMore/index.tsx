@@ -11,7 +11,7 @@ export const KnowMore = ({ className }: KnowMoreProps) => {
     <Balloon variant='tl' size='32' className={className} color='gradient'>
       <div className='flex h-full w-full flex-col items-center justify-center text-white'>
         <Image src='/assets/icons/scroll-down.svg' alt='scroll down icon' height={36} width={36} />
-        <span className='text-sm md:text-base'>Saiba mais</span>
+        <span className='text-sm lg:text-base'>Saiba mais</span>
       </div>
     </Balloon>
   )

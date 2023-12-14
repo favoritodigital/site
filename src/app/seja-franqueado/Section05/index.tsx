@@ -17,7 +17,10 @@ export const Section05 = () => {
         </div>
       </div>
       <div className='absolute left-0 top-0 hidden flex-col gap-2 md:flex'>
-        <div className='h-40 w-20 rounded-br-[50%] bg-secondary-400' />
+        <div className='relative pb-10'>
+          <div className='h-28 w-20 bg-secondary-400' />
+          <Balloon variant='bl' color='secondary' size='20' className='absolute bottom-0 right-0' />
+        </div>
         <Balloon variant='br' color='outlineTertiary' size='20' />
       </div>
       <div className='absolute bottom-0 right-0 hidden flex-col gap-2 md:flex'>
@@ -27,7 +30,15 @@ export const Section05 = () => {
         </div>
         <div className='flex gap-2'>
           <Balloon variant='tr' color='outlineTertiary' size='20' />
-          <div className='h-28 w-20 rounded-tr-[50%] bg-primaryLight-400' />
+          <div className='relative pt-10'>
+            <Balloon
+              variant='tl'
+              color='primaryLight'
+              size='20'
+              className='absolute right-0 top-0'
+            />
+            <div className='h-20 w-20  bg-primaryLight-400' />
+          </div>
         </div>
       </div>
     </section>
