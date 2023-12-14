@@ -49,6 +49,9 @@ module.exports = {
         background: {
           400: '#EDEDED',
         },
+        border: {
+          50: '#C5C5CD80',
+        },
       },
     },
   },
