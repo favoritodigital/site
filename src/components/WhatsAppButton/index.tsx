@@ -1,11 +1,20 @@
+'use client'
+
 import React from 'react'
 
 import Image from 'next/legacy/image'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 import { Balloon } from '../Balloon'
 
+import { PagesBadge } from '@utils/pagesBadge'
+
 export const WhatsAppButton = () => {
+  const pathname = usePathname()
+
+  if (pathname === PagesBadge.franchiseeLandingPage) return null
+
   return (
     <Link
       className='b-tr fixed bottom-4 right-4 hover:scale-110'
