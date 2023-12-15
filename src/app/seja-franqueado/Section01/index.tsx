@@ -30,7 +30,7 @@ export const Section01 = () => {
               Quero saber mais!
             </Link>
           </div>
-          <div className='absolute bottom-[-5rem] right-[50%] z-20 h-24 w-24 translate-x-[50%] sm:bottom-[-7rem] sm:h-32 sm:w-32 lg:bottom-[-4rem] lg:right-[-4rem] lg:translate-x-0'>
+          <div className='absolute bottom-[-5rem] right-[50%] z-10 h-24 w-24 translate-x-[50%] sm:bottom-[-7rem] sm:h-32 sm:w-32 lg:bottom-[-4rem] lg:right-[-4rem] lg:translate-x-0'>
             <KnowMore className='h-24 w-24 lg:h-32 lg:w-32' />
           </div>
           <div className='absolute left-[-3rem] top-[-3rem] hidden flex-col gap-2 sm:flex'>
