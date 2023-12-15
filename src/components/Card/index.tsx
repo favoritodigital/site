@@ -8,7 +8,7 @@ interface CardProps {
   description: string
 }
 
-const Card = ({ icon, title, description }: CardProps) => {
+export const Card = ({ icon, title, description }: CardProps) => {
   return (
     <div className='flex h-56 w-64 flex-col gap-6 rounded-2xl bg-white p-6'>
       <Balloon
@@ -27,5 +27,3 @@ const Card = ({ icon, title, description }: CardProps) => {
     </div>
   )
 }
-
-export default Card

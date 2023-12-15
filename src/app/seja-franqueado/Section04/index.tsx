@@ -1,12 +1,12 @@
-import { Balloon } from '@/components/Balloon'
-import Card from '@/components/Card'
+import { Balloon } from '@components/Balloon'
+import { Card } from '@components/Card'
 
 export const Section04 = () => {
   return (
-    <section className='bg-gradient-to-tr from-primaryDark-10 to-primaryLight-10 p-10'>
+    <section className='bg-gradient-to-tr from-primaryDark-10 to-primaryLight-10 p-10 pb-14'>
       <div className='flex w-full justify-center pb-10'>
         <div className='flex grid-cols-[3.5rem_1fr] flex-col items-center gap-10 text-center md:grid'>
-          <Balloon variant='full' color='primaryLight' size='14'>
+          <Balloon variant='full' color='gradient' size='14'>
             <span className='flex h-full w-full items-center justify-center text-3xl text-white'>
               3
             </span>
@@ -56,7 +56,7 @@ export const Section04 = () => {
           </div>
         </div>
       </div>
-      <div className='flex flex-col gap-6 pb-5 pt-20'>
+      {/* <div className='flex flex-col gap-6 pb-5 pt-20'>
         <h2 className='text-center text-3xl'>
           Nossos depoimentos{' '}
           <span className='bg-gradient-to-tr from-primaryDark-400 to-primaryLight-400 bg-clip-text font-semibold text-transparent'>
@@ -69,8 +69,8 @@ export const Section04 = () => {
           allowFullScreen
           title='Video de apresentação da Favorito'
         />
-        <div id='form' />
-      </div>
+      </div> */}
+      <div id='form' />
     </section>
   )
 }

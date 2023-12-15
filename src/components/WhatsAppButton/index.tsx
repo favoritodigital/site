@@ -5,11 +5,11 @@ import Link from 'next/link'
 
 import { Balloon } from '../Balloon'
 
-const WhatsAppButton = () => {
+export const WhatsAppButton = () => {
   return (
     <Link
-      className='b-tr fixed bottom-4 right-4'
-      href='https://api.whatsapp.com/send?phone=5548996303152'
+      className='b-tr fixed bottom-4 right-4 hover:scale-110'
+      href='https://api.whatsapp.com/send?phone=5547997536595'
       target='_blank'
     >
       <Balloon
@@ -24,5 +24,3 @@ const WhatsAppButton = () => {
     </Link>
   )
 }
-
-export default WhatsAppButton

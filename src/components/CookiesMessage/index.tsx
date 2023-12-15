@@ -5,19 +5,25 @@ import { useContext } from 'react'
 import Image from 'next/legacy/image'
 import Link from 'next/link'
 
-import { CookiesContext } from '../../contexts/CookiesContext'
+import { PagesBadge } from '@/utils/pagesBadge'
 
-export function CookiesMessage() {
+import { CookiesContext } from '@contexts/CookiesContext'
+
+export const CookiesMessage = () => {
   const { cookiesIsEnabled, setCookiesIsEnabled } = useContext(CookiesContext)
 
   return (
     !cookiesIsEnabled && (
-      <div className='border-border-50 fixed bottom-4 left-4 w-full max-w-sm rounded-3xl border-2 bg-white p-5'>
+      <div className='fixed bottom-4 left-4 w-full max-w-sm rounded-3xl border-2 border-border-50 bg-white p-5'>
         <div className='pb-5'>
           <p>
             Utilizamos cookies para que você tenha a melhor experiência em nosso site. Para saber
             mais acesse nossa página de{' '}
-            <Link href='/politica-de-privacidade' className='font-bold hover:text-primaryLight-400'>
+            <Link
+              href={PagesBadge.privacyPolicy}
+              className='font-bold underline hover:text-primaryLight-400'
+              target='_blank'
+            >
               Política de Privacidade
             </Link>
             .

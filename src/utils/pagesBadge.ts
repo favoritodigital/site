@@ -1,8 +1,8 @@
 export enum PagesBadge {
-  home = '/',
+  home = 'https://favorito.digital/',
   franchiseeLandingPage = '/seja-franqueado',
-  establishmentLandingPage = '/cadastre-seu-estabelecimento',
-  whoWeAre = '/quem-somos',
-  termsOfUse = '/termos-de-uso',
-  privacyPolicy = '/politica-de-privacidade',
+  establishmentLandingPage = 'https://favorito.digital/cadastre-seu-estabelecimento',
+  whoWeAre = 'https://favorito.digital/quem-somos',
+  termsOfUse = 'https://favorito.digital/termos-de-uso',
+  privacyPolicy = 'https://favorito.digital/politica-de-privacidade',
 }

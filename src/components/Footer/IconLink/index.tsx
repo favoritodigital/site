@@ -11,7 +11,7 @@ export const IconLink = ({ icon, title, target, ...props }: IconLinkProps) => {
   return (
     <Link title={title} target={target} {...props}>
       <div className='relative h-10 w-10 hover:scale-110'>
-        <Image src={icon} alt={`${title} - icon`} layout='fill' objectFit='contain' className='' />
+        <Image src={icon} alt={`${title} - icon`} layout='fill' objectFit='contain' />
       </div>
     </Link>
   )

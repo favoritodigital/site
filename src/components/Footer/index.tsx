@@ -110,11 +110,11 @@ export const Footer = () => {
               />
             </div>
           </Link>
-          <Link href='https://www.wow.ac/' target='_blank'>
+          <Link href='https://wow.ac/' target='_blank'>
             <div className='relative h-20 w-32'>
               <Image
                 src='/assets/wow.svg'
-                alt='WOW - aceleração de Startup e Investidores'
+                alt='WOW - Aceleradora de Startups'
                 objectFit='contain'
                 layout='fill'
               />

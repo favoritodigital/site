@@ -36,7 +36,7 @@ module.exports = {
           400: '#fa475c',
         },
         primaryDark: {
-          10: '#E315811a',
+          10: '#e315811a',
           85: '#c72f79d9',
           400: '#c72f79',
         },
@@ -47,10 +47,10 @@ module.exports = {
           400: '#191a38',
         },
         background: {
-          400: '#EDEDED',
+          400: '#ededed',
         },
         border: {
-          50: '#C5C5CD80',
+          50: '#c5c5cd80',
         },
       },
     },

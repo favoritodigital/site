@@ -9,7 +9,7 @@ export const Section03 = () => {
       <div className='mx-10 mt-10 flex max-w-6xl grid-cols-2 flex-col gap-10 md:mx-20 md:mt-20 lg:grid'>
         <div className='flex h-full items-center'>
           <div className='flex w-full grid-cols-[3.5rem_1fr] flex-col items-center gap-10 md:grid md:items-start'>
-            <Balloon variant='full' color='primaryLight' size='14'>
+            <Balloon variant='full' color='gradient' size='14'>
               <span className='flex h-full w-full items-center justify-center text-3xl text-white'>
                 1
               </span>
@@ -63,7 +63,7 @@ export const Section03 = () => {
       <div className='m-10 flex max-w-6xl grid-cols-2 flex-col gap-10 md:m-20 lg:grid'>
         <div className='flex h-full items-center'>
           <div className='flex w-full grid-cols-[3.5rem_1fr] flex-col items-center gap-10 md:grid md:items-start'>
-            <Balloon variant='full' color='primaryLight' size='14'>
+            <Balloon variant='full' color='gradient' size='14'>
               <span className='flex h-full w-full items-center justify-center text-3xl text-white'>
                 2
               </span>
