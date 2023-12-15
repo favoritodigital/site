@@ -84,23 +84,43 @@ export const Footer = () => {
           />
         </div>
         <div className='flex flex-col gap-2 text-lg '>
-          <Link className='w-fit hover:text-primaryLight-400' href={PagesBadge.termsOfUse}>
+          <Link
+            className='w-fit hover:text-primaryLight-400'
+            href={PagesBadge.termsOfUse}
+            target='_blank'
+          >
             Termos de Uso
           </Link>
-          <Link className='w-fit hover:text-primaryLight-400' href={PagesBadge.privacyPolicy}>
+          <Link
+            className='w-fit hover:text-primaryLight-400'
+            href={PagesBadge.privacyPolicy}
+            target='_blank'
+          >
             Política de Privacidade
           </Link>
         </div>
-        <Link href='https://softville.org.br/' target='_blank'>
-          <div className='relative h-20 w-52'>
-            <Image
-              src='/assets/softville.svg'
-              alt='Softville - escola de negócios'
-              objectFit='contain'
-              layout='fill'
-            />
-          </div>
-        </Link>
+        <div className='flex gap-6'>
+          <Link href='https://softville.org.br/' target='_blank'>
+            <div className='relative h-20 w-32'>
+              <Image
+                src='/assets/softville.svg'
+                alt='Softville - escola de negócios'
+                objectFit='contain'
+                layout='fill'
+              />
+            </div>
+          </Link>
+          <Link href='https://wow.ac/' target='_blank'>
+            <div className='relative h-20 w-32'>
+              <Image
+                src='/assets/wow.svg'
+                alt='WOW - Aceleradora de Startups'
+                objectFit='contain'
+                layout='fill'
+              />
+            </div>
+          </Link>
+        </div>
       </div>
     </div>
   )

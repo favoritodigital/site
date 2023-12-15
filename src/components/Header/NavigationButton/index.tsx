@@ -6,7 +6,7 @@ const navigationButtonVariants = tv({
   base: 'px-4 py-2',
   variants: {
     variant: {
-      desktop: 'rounded-lg bg-white',
+      desktop: 'rounded-lg bg-transparent',
       mobile: 'text-white',
     },
     active: {

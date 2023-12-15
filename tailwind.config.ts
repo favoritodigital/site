@@ -31,10 +31,12 @@ module.exports = {
       },
       colors: {
         primaryLight: {
+          10: '#fa475c1a',
           85: '#fa475cd9',
           400: '#fa475c',
         },
         primaryDark: {
+          10: '#e315811a',
           85: '#c72f79d9',
           400: '#c72f79',
         },
@@ -43,6 +45,12 @@ module.exports = {
         },
         tertiary: {
           400: '#191a38',
+        },
+        background: {
+          400: '#ededed',
+        },
+        border: {
+          50: '#c5c5cd80',
         },
       },
     },
