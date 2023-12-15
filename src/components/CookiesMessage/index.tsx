@@ -14,7 +14,7 @@ export const CookiesMessage = () => {
 
   return (
     !cookiesIsEnabled && (
-      <div className='fixed bottom-4 left-4 w-full max-w-sm rounded-3xl border-2 border-border-50 bg-white p-5'>
+      <div className='fixed bottom-4 left-4 right-4 z-50 max-w-sm rounded-3xl border-2 border-border-50 bg-white p-5'>
         <div className='pb-5'>
           <p>
             Utilizamos cookies para que você tenha a melhor experiência em nosso site. Para saber
