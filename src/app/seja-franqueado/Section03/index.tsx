@@ -38,7 +38,7 @@ export const Section03 = () => {
           <div className='relative w-fit lg:mt-0'>
             <Balloon variant='bl' size='image' className='relative'>
               <Image
-                src='/assets/images/howWorks.jpg'
+                src='/assets/images/how-works.jpg'
                 alt='Barista adulto medio e seu jovem colega de trabalho usando o touchpad enquanto trabalhava em um pub'
                 objectFit='cover'
                 layout='fill'
@@ -119,7 +119,7 @@ export const Section03 = () => {
           <div className='relative h-fit w-fit lg:mt-0'>
             <Balloon variant='br' size='image' className='relative'>
               <Image
-                src='/assets/images/yourEarnings.jpg'
+                src='/assets/images/your-earnings.jpg'
                 alt='Feliz empresario parado na janela do escritorio e lendo mensagem de texto no celular enquanto segura o laptop'
                 objectFit='cover'
                 layout='fill'
