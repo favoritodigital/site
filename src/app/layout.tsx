@@ -51,13 +51,25 @@ export const metadata: Metadata = {
     type: 'website',
     url: 'https://lp.favorito.digital/', // TODO retirar o lp.
     siteName: 'Favorito',
-    images: 'https://lp.favorito.digital/favorito.png', // TODO retirar o lp.
+    images: {
+      url: 'https://lp.favorito.digital/favorito.png', // TODO retirar o lp.'
+      type: 'image/png',
+      width: 1024,
+      height: 1024,
+      alt: 'Favorito',
+    },
   },
   twitter: {
     title,
     description,
     card: 'summary_large_image',
-    images: 'https://lp.favorito.digital/favorito.png', // TODO retirar o lp.
+    images: {
+      url: 'https://lp.favorito.digital/favorito.png', // TODO retirar o lp.'
+      type: 'image/png',
+      width: 1024,
+      height: 1024,
+      alt: 'Favorito',
+    },
   },
 }
 
