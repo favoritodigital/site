@@ -21,9 +21,42 @@ const lato = Lato({
   display: 'swap',
 })
 
+const title = 'Encontre onde comer e beber | Favorito'
+const description =
+  'Descubra o melhor da gastronomia e lazer com o Favorito! Encontre a programação de bares e restaurantes, personalize sua busca, aproveite ofertas e curta cada momento.'
+
 export const metadata: Metadata = {
-  title: 'Favorito: sua melhor experiência',
-  description: 'Descubra seu novo local Favorito!',
+  title,
+  description,
+  applicationName: 'Favorito',
+  keywords: [
+    'onde sair',
+    'onde comer',
+    'comer fora',
+    'onde beber',
+    'bares',
+    'restaurantes',
+    'favorito',
+    'evento',
+    'promoção',
+    'desconto',
+    'happy hour',
+    'franquia',
+    'franquia digital',
+  ],
+  openGraph: {
+    title,
+    description,
+    locale: 'pt_BR',
+    type: 'website',
+    url: 'https://favorito.digital/',
+    siteName: 'Favorito',
+  },
+  twitter: {
+    title,
+    description,
+    card: 'summary_large_image',
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
