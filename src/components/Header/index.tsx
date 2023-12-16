@@ -30,7 +30,7 @@ export const Header = () => {
       <Link className='relative flex h-full w-40' href={PagesBadge.home}>
         <Image
           src='/assets/favorito-black.svg'
-          alt='Favorito - sua melhor experiência'
+          alt='Favorito - encontre onde comer e beber'
           objectFit='contain'
           layout='fill'
         />
@@ -56,7 +56,7 @@ export const Header = () => {
       <MenuButton active={isMenuOpen} onClick={handleMenuClick} />
       <div
         data-menuopen={isMenuOpen}
-        className='transition-height absolute right-0 top-0 z-30 h-0 w-screen bg-gradient-to-tr from-primaryDark-85 to-primaryLight-85 duration-300 ease-in-out 
+        className='transition-height absolute right-0 top-0 z-30 h-0 w-screen bg-gradient-to-tr from-primaryDark-85 to-primaryLight-85 duration-300 ease-in-out
         data-[menuopen=true]:h-screen data-[menuopen=false]:opacity-0 lg:hidden'
       >
         {isMenuOpen && (
@@ -70,7 +70,7 @@ export const Header = () => {
               >
                 <Image
                   src='/assets/favorito-white.svg'
-                  alt='Favorito - sua melhor experiência'
+                  alt='Favorito - encontre onde comer e beber'
                   objectFit='contain'
                   layout='fill'
                 />

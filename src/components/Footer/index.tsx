@@ -12,7 +12,7 @@ export const Footer = () => {
         <Link className='relative h-12 w-52' href={PagesBadge.home}>
           <Image
             src='/assets/favorito.svg'
-            alt='Favorito - sua melhor experiência'
+            alt='Favorito - encontre onde comer e beber'
             objectFit='contain'
             layout='fill'
           />
