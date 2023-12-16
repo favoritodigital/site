@@ -49,13 +49,15 @@ export const metadata: Metadata = {
     description,
     locale: 'pt_BR',
     type: 'website',
-    url: 'https://favorito.digital/',
+    url: 'https://lp.favorito.digital/', // TODO retirar o lp.
     siteName: 'Favorito',
+    images: 'https://lp.favorito.digital/favorito.png', // TODO retirar o lp.
   },
   twitter: {
     title,
     description,
     card: 'summary_large_image',
+    images: 'https://lp.favorito.digital/favorito.png', // TODO retirar o lp.
   },
 }
 
