@@ -6,7 +6,7 @@ import { KnowMore } from '@/components/KnowMore'
 export const Section01 = () => {
   return (
     <section className='relative flex flex-col items-center overflow-x-hidden bg-background-400 lg:block lg:h-screen lg:max-h-[38rem] xl:max-h-[51rem] 2xl:max-h-none'>
-      <div className='relative left-[-10%] top-0 h-screen max-h-[26rem] w-[120%] bg-white sm:max-h-[36rem] lg:absolute lg:left-auto lg:right-[-6rem] lg:max-h-[33rem] lg:w-[60%] lg:bg-background-400 xl:max-h-[48rem] 2xl:max-h-[calc(100%-3rem)]'>
+      <div className='relative left-[-10%] top-0 h-screen max-h-[26rem] w-[120%] bg-white sm:max-h-[36rem] lg:absolute lg:left-auto lg:right-[-3rem] lg:max-h-[33rem] lg:w-[60%] lg:bg-background-400 xl:max-h-[48rem] 2xl:max-h-[calc(100%-3rem)]'>
         <Image
           src='/assets/images/franchisee.jpg'
           alt='Freelancer feliz com tablet e laptop em uma cafeteria'
@@ -41,9 +41,9 @@ export const Section01 = () => {
             </Link>
           </div>
         </div>
-        <div className='absolute bottom-[-4rem] right-[50%] z-20 h-24 w-24 translate-x-[75%] sm:bottom-[-4.5rem] lg:bottom-40 lg:right-[-2rem] lg:h-32 lg:w-32 lg:translate-x-[50%] 2xl:right-16'>
-          <KnowMore className='h-24 w-24 lg:h-32 lg:w-32' />
-        </div>
+      </div>
+      <div className='absolute bottom-0 right-[50%] z-20 h-24 w-24 translate-x-[50%] lg:bottom-24 lg:h-32 lg:w-32 xl:bottom-32'>
+        <KnowMore className='h-24 w-24 lg:h-32 lg:w-32' />
       </div>
     </section>
   )
