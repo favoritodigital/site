@@ -18,11 +18,6 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/termos-de-uso',
-        destination: 'https://favorito.digital/termos-de-uso',
-        permanent: true,
-      },
-      {
         source: '/politica-de-privacidade',
         destination: 'https://favorito.digital/politica-de-privacidade',
         permanent: true,
