@@ -8,11 +8,6 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/cadastre-seu-estabelecimento',
-        destination: 'https://favorito.digital/cadastre-seu-estabelecimento',
-        permanent: true,
-      },
-      {
         source: '/quem-somos',
         destination: 'https://favorito.digital/quem-somos',
         permanent: true,
