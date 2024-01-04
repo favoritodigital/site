@@ -15,7 +15,7 @@ export const Section02 = () => {
         className='mx-auto h-[26rem] w-full max-w-[48rem] rounded-md'
         src='https://www.youtube.com/embed/-p6tSfUjP3o'
         allowFullScreen
-        title='Video de apresentação da Favorito'
+        title='Video de principais benefícios do Favorito'
       />
     </section>
   )

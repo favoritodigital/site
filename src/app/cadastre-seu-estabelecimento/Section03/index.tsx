@@ -21,7 +21,7 @@ export const Section03 = () => {
         </div>
       </div>
       <div className='flex justify-center'>
-        <div className='flex w-full max-w-4xl '>
+        <div className='flex w-full max-w-xl lg:max-w-4xl'>
           <div className='flex w-full grid-cols-2 flex-col place-items-center gap-8 md:grid lg:grid-cols-3'>
             <Card
               icon='/assets/icons/clock-emoji.svg'
