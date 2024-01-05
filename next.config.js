@@ -4,7 +4,7 @@ const nextConfig = {
     return [
       {
         source: '/',
-        destination: 'https://favorito.digital/',
+        destination: '/inicio',
         permanent: true,
       },
       {
