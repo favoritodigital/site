@@ -18,7 +18,7 @@ export const WhatsAppButton = () => {
   return (
     <Link
       className='b-tr fixed bottom-4 right-4 hover:scale-110'
-      href='https://api.whatsapp.com/send?phone=5547997536595'
+      href='https://wa.me/5547997536595'
       target='_blank'
     >
       <Balloon
